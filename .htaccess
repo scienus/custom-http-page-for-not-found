@@ -1,16 +1,13 @@
 Options -MultiViews 
-RewriteEngine On 
-RewriteCond %{REQUEST_FILENAME} !-d 
-RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteEngine On 
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME} !-f 
 RewriteRule ^([^\.]+)$ $1.php [NC,L] 
-
-# BEGIN Error_Document 
-
-ErrorDocument 400 /upps?p=400 
-ErrorDocument 401 /upps?p=401 
-ErrorDocument 402 /upps?p=402 
-ErrorDocument 403 /upps?p=403 
-ErrorDocument 404 /upps?p=404 
-ErrorDocument 500 /upps?p=500  
-
+# BEGIN Error_Document 
+ErrorDocument 400 /upps?c=400 
+ErrorDocument 401 /upps?c=401 
+ErrorDocument 402 /upps?c=402 
+ErrorDocument 403 /upps?c=403 
+ErrorDocument 404 /upps?c=404 
+ErrorDocument 500 /upps?c=500  
 # END Error_Document 
